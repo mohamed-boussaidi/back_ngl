@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "628f94d79e8d96b3cee8be3e"
+  },
+  "name": "admin",
+  "permissions": [
+    {
+      "$oid": "628f9483b445e10a680a8351"
+    },
+    {
+      "$oid": "629113952a2fcf4f867316b0"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6291193e08f25c33966add5d"
+  },
+  "name": "reponsable magasin",
+  "permissions": [
+    {
+      "$oid": "62dd8178b4b7317087bf80ce"
+    },
+    {
+      "$oid": "62dd8191b4b7317087bf80d9"
+    },
+    {
+      "$oid": "62dd81aeb4b7317087bf80dc"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c6c33b99a2a3bc88dce158"
+  },
+  "name": "magasiner",
+  "permissions": [
+    {
+      "$oid": "62c6c32c99a2a3bc88dce14f"
+    }
+  ],
+  "__v": 0
+}]

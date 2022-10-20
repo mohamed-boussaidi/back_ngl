@@ -1,0 +1,85 @@
+[{
+  "_id": {
+    "$oid": "628f9483b445e10a680a8351"
+  },
+  "name": "add_user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "629113952a2fcf4f867316b0"
+  },
+  "name": "view_user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6291140037f4106553c42258"
+  },
+  "name": "update_user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6291168608f25c33966add16"
+  },
+  "name": "delete_user",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c6c32c99a2a3bc88dce14f"
+  },
+  "name": "add_task",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd8178b4b7317087bf80ce"
+  },
+  "name": "view_absence",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd8191b4b7317087bf80d9"
+  },
+  "name": "add_absence",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd81aeb4b7317087bf80dc"
+  },
+  "name": "update_absence",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd81d0b4b7317087bf80e1"
+  },
+  "name": "add_article",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd81dab4b7317087bf80e4"
+  },
+  "name": "view_article",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd81eeb4b7317087bf80e7"
+  },
+  "name": "view_tasks",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd8453b4b7317087bf818a"
+  },
+  "name": "view_article",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd845db4b7317087bf818d"
+  },
+  "name": "view_config",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62dd846cb4b7317087bf8190"
+  },
+  "name": "view_activite",
+  "__v": 0
+}]
