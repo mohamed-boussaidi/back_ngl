@@ -1,36 +1,36 @@
 {
-  "name": "back_logistic_dep",
+  "name": "back_ngl",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/parkour555/back_logistic_dep.git"
+    "url": "git+https://github.com/parkour555/back_ngl.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/parkour555/back_logistic_dep/issues"
+    "url": "https://github.com/parkour555/back_ngl/issues"
   },
-  "homepage": "https://github.com/parkour555/back_logistic_dep#readme",
+  "homepage": "https://github.com/parkour555/back_ngl#readme",
   "dependencies": {
-    "@fast-csv/parse": "^4.3.6",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "fast-csv": "^4.3.6",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.3",
     "moment-timezone": "^0.5.34",
     "mongoose": "^6.3.4",
-    "multer": "^1.4.5-lts.1",
-    "node-cron": "^3.0.2",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "pino": "^8.7.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "^9.1.1",
+    "prettier": "^2.7.1"
   }
 }
