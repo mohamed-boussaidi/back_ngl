@@ -1,0 +1,50 @@
+{
+  "name": "back_ngl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamed-boussaidi/back_ngl.git"
+  },
+  "author": "Khalil Dhoiybi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohamed-boussaidi/back_ngl/issues"
+  },
+  "homepage": "https://github.com/mohamed-boussaidi/back_ngl#readme",
+  "dependencies": {
+    "@typegoose/typegoose": "^9.13.1",
+    "argon2": "^0.30.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "http-status-codes": "^2.2.0",
+    "mongoose": "^6.7.3",
+    "nanoid": "^4.0.0",
+    "pino": "^8.7.0",
+    "zod": "^3.19.1",
+    "zod-express-middleware": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
+    "eslint": "^8.28.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.5.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "pino-pretty": "^9.1.1",
+    "prettier": "^2.8.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.3"
+  }
+}
