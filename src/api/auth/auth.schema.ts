@@ -3,7 +3,7 @@ import { object, string, TypeOf } from 'zod';
 // Login Schema
 export const loginSchema = {
   body: object({
-    instagramDisplayCode: string({
+    code: string({
       required_error: 'Code is required',
     }),
   }),

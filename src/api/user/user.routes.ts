@@ -1,11 +1,10 @@
 import express from 'express';
-// import { processRequestBody } from 'zod-express-middleware';
 import { getUserHandler } from './user.controller';
-// import requireUser from '../../middleware/requireUser';
+import requireUser from '../../middleware/requireUser';
 
 const router = express.Router();
 
-// User Info Route
-router.get('/me', /*requireUser,*/ getUserHandler);
+// User Profile Route
+router.get('/profile', requireUser, getUserHandler);
 
 export default router;

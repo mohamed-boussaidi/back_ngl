@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 
 import router from './api';
+import deserializeUser from './middleware/deserializeUser';
 
 // Initials
 const app = express();
@@ -15,6 +16,7 @@ app.use(
 );
 
 // Middlewares
+app.use(deserializeUser);
 
 // Routes
 app.use('/api', router);
