@@ -13,6 +13,9 @@ export class User {
 
   @prop({ required: true, unique: true })
   public instagramAccessToken: string;
+
+  @prop({ required: true })
+  public instagramTokenExpiration: number;
 }
 // User Model
 export const UserModel = getModelForClass(User, {

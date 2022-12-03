@@ -16,22 +16,36 @@ export async function loginHandler(
   res: Response
 ) {
   const { code } = req.body;
-  const shotLivedToken = await getInstagramShortToken(code);
-  const { ApiTokenId, instagramAccessToken } = await getInstagramAccess(
-    shotLivedToken
-  );
-  const { instagramId, username } = await getInstagramProfile(
-    ApiTokenId,
-    instagramAccessToken
-  );
-  const user = await findUserByInstagramId(instagramId);
   try {
+    const shortTokenData = await getInstagramShortToken(code);
+    const shotLivedToken = shortTokenData.access_token;
+    const ApiTokenId = shortTokenData.user_id;
+    if (!shotLivedToken || !ApiTokenId) {
+      return res.status(StatusCodes.BAD_REQUEST);
+    }
+
+    const accessTokenData = await getInstagramAccess(shotLivedToken);
+    const instagramAccessToken = accessTokenData.access_token;
+    const instagramTokenExpiration = accessTokenData.expires_in;
+    if (!instagramAccessToken || !instagramTokenExpiration) {
+      return res.status(StatusCodes.BAD_REQUEST);
+    }
+
+    const profileData = await getInstagramProfile(instagramAccessToken);
+    const instagramId = profileData.id;
+    const username = profileData.username;
+    if (!instagramId || !username) {
+      return res.status(StatusCodes.BAD_REQUEST);
+    }
+
+    const user = await findUserByInstagramId(instagramId);
     if (!user) {
       const newUser = await createUser({
         instagramId,
         username,
         ApiTokenId,
         instagramAccessToken,
+        instagramTokenExpiration,
       });
       const payload = omit(newUser.toJSON(), [
         'ApiTokenId',
@@ -42,6 +56,7 @@ export async function loginHandler(
     }
     user.ApiTokenId = ApiTokenId;
     user.instagramAccessToken = instagramAccessToken;
+    user.instagramTokenExpiration = instagramTokenExpiration;
     await user.save();
     const payload = omit(user.toJSON(), ['ApiTokenId', 'instagramAccessToken']);
     const jwt = signJwt(payload);
