@@ -1,7 +1,7 @@
 import { getModelForClass, prop, Ref } from '@typegoose/typegoose';
 import { User } from '../user/user.model';
 
-// User Class
+// Message Class
 export class Message {
   @prop({ required: true })
   public message: string;
@@ -12,7 +12,7 @@ export class Message {
   @prop({ ref: () => User })
   public messageFrom: Ref<User>;
 }
-// User Model
+// Message Model
 export const MessageModel = getModelForClass(Message, {
   schemaOptions: {
     timestamps: true,
