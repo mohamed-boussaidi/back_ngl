@@ -7,10 +7,10 @@ export class Message {
   public message: string;
 
   @prop({ ref: () => User })
-  public messageTo: Ref<User>;
+  public messageFrom: Ref<User>;
 
   @prop({ ref: () => User })
-  public messageFrom: Ref<User>;
+  public messageTo: Ref<User>;
 }
 // Message Model
 export const MessageModel = getModelForClass(Message, {

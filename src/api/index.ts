@@ -3,6 +3,7 @@ import logger from '../utils/logger';
 
 import authRouter from './auth/auth.routes';
 import userRouter from './user/user.routes';
+import messageRouter from './message/message.routes';
 
 const router = express.Router();
 
@@ -15,5 +16,6 @@ router.get('/health', (_, res: Response) => {
 // Auth Router
 router.use('/auth', authRouter);
 router.use('/user', userRouter);
+router.use('/message', messageRouter);
 
 export default router;
